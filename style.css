@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+}
+
+.content {
+    transform:translateY(70%);
+    font-size: 30px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+span {
+    margin-top: 0px;
+}
+
+p {
+    display: inline;
+}
+
+#id, #name {
+    border: solid;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#Rollens
+{
+  display:none;
+}

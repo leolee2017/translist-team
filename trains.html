@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="sha1.js"></script>
+<script type="text/javascript" src="Sample.js"></script>
+<script type="text/javascript" src="SearchTrainData.js"></script>
+<script src="style.css">
+<script src="main.js" type="text/javascript"></script>
+</head>
+<body>
+<h1 style="color:red">台鐵資料台要大寫Ex:"台中XX""臺中OO"</h1>
+<h2>選擇搭乘之交通工具</h2>
+<h3 style="color:gray">//顯示車站資訊以及輸入時間相近之列車</h3>
+選擇搭乘台鐵或高鐵：<select id="TypeInput">
+  <option value="TRA">台鐵</option>
+  <option value="THSR">高鐵</option>
+</select><br>
+選擇起站：<input type=text" id="OriginalStationInput"><br>
+選擇迄站：<input type="text" id="TerminalStationInput"><br>
+選擇出發時間：<input type="text" id="StartTimeInput">(Ex:hh-mm)<br>
+選擇出發日期：<input type="text" id="StartDateInput">(Ex:yyyy-mm-dd)<br>
+選擇票種：<input type="text" id="TicketTypeInput">(Alpha版~台鐵請輸入"成自"高鐵請輸入"一般or商務")<br>
+<button onclick="Start()">送出</button>
+<div style="display:none" id="Rollens">
+<h2>StationID:</h2><h2 id="StartStationID">Loading</h2>
+<h2>StationName:</h2><h2 id="StartStationName">Loading</h2>
+<h2>TerminalStationID:</h2><h2 id="TerminalStationID">Loading</h2>
+<h2>TerminalStationName:</h2><h2 id="TerminalStationName">Loading</h2>
+<h2>TicketType:</h2><h2 id="TicketType">Loading</h2>
+<h2>Price:</h2><h2 id="Price">Loading</h2>
+<table border='1' width='800'>
+<tr><td>車次</td><td>車種</td><td>起點站</td><td>終點站</td><td>上車站</td><td>時間</td><td>下車站</td><td>時間</td></tr>
+<tr><td id="Sug0No">Loading</td><td id="Sug0Type">Loading</td><td id="Sug0Start">Loading</td><td id="Sug0End">Loading</td><td id="Sug0Original">Loading</td><td id="Sug0OriTime">Loading</td><td id="Sug0Destination">Loading</td><td id="Sug0DesTime">Loading</td></tr>
+<tr><td id="Sug1No">Loading</td><td id="Sug1Type">Loading</td><td id="Sug1Start">Loading</td><td id="Sug1End">Loading</td><td id="Sug1Original">Loading</td><td id="Sug1OriTime">Loading</td><td id="Sug1Destination">Loading</td><td id="Sug1DesTime">Loading</td></tr>
+<tr><td id="Sug2No">Loading</td><td id="Sug2Type">Loading</td><td id="Sug2Start">Loading</td><td id="Sug2End">Loading</td><td id="Sug2Original">Loading</td><td id="Sug2OriTime">Loading</td><td id="Sug2Destination">Loading</td><td id="Sug2DesTime">Loading</td></tr>
+<tr><td id="Sug3No">Loading</td><td id="Sug3Type">Loading</td><td id="Sug3Start">Loading</td><td id="Sug3End">Loading</td><td id="Sug3Original">Loading</td><td id="Sug3OriTime">Loading</td><td id="Sug3Destination">Loading</td><td id="Sug3DesTime">Loading</td></tr>
+<tr><td id="Sug4No">Loading</td><td id="Sug4Type">Loading</td><td id="Sug4Start">Loading</td><td id="Sug4End">Loading</td><td id="Sug4Original">Loading</td><td id="Sug4OriTime">Loading</td><td id="Sug4Destination">Loading</td><td id="Sug4DesTime">Loading</td></tr>
+</table>
+</div>
+<!--////////////////////////////////////////////--!>
+<h3 style="color:gray">//輸入車站名稱並顯示其地址</h3>
+        <div class="content">
+            <h1>Translist</h1>
+            <br><span>Station Name </span><input id="name" type="text" maxlength="3" size="3"><br><br>
+            <span>Address : </span>
+            <p id="address"></p>
+        </div>
+        <script src="main.js" type="text/javascript"></script>
+<!--///////////////////////////////////////--!>
+
+
+<h3 style="color:gray">//輸入任意地址或地標顯示其附近之車站</h3>
+
+輸入地址或地標<input type="text" name="sstop"><br>
+<button type="submit" id="fuck">最近車站</button><br>
+<h1 id="cost1"></h1><h1 id="cost3"></h1><br>
+<h1 id="cost2"></h1><h1 id="cost4"></h1>
+
+
+
+
+
+<!--///////////////////////////////////////--!>
+</body>
+</html>
+
